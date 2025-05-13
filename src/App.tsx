@@ -340,11 +340,12 @@ function App() {
               <h2 className="text-2xl font-semibold mb-3 text-flow-teal">Welcome to PointFlow</h2>
               <p className="text-secondary-text mb-8 max-w-xs mx-auto">Connect your wallet to view your Flow Point balance and transaction history.</p>
               <div className="pt-4 border-t border-cloud-grey">
-                <img 
+                <p className="text-l text-cloud-grey">Powered by Solana</p>
+                {/* <img 
                   src="https://solana.com/_next/static/media/logotype.e4df684f.svg" 
                   alt="Powered by Solana" 
                   className="h-8 mx-auto opacity-60"
-                />
+                /> */}
               </div>
             </div>
           ) : activeView === 'settings' ? (
