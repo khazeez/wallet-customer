@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* PointFlow Brand Colors - Updated to match guidelines */
+    --flow-teal: #1A7F64; /* Primary brand color */
+    --deep-ink: #333333; /* Primary text color */
+    --secondary-text: #666666; /* Secondary text color */
+    --accent-green: #34C759; /* Accent text for positive metrics */
+    --snow-white: #FFFFFF; /* Card background */
+    --bg-light-gray: #F5F7FA; /* Background color */
+    --cloud-grey: #E0E0E0; /* Border color */
+    --soft-mint: #E6F7F4; /* Lighter teal for backgrounds */
+    --success-green: #34C759; /* Success state */
+    --alert-coral: #FF3B30; /* Error state */
+    
+    /* UI Semantic Colors */
+    --background-primary: var(--bg-light-gray);
+    --background-secondary: var(--snow-white);
+    --text-primary: var(--deep-ink);
+    --text-secondary: var(--secondary-text);
+    --border-color: var(--cloud-grey);
+    --accent-color: var(--flow-teal);
+    --success-color: var(--success-green);
+    --error-color: var(--alert-coral);
+    --reward-highlight: var(--soft-mint);
+    
+    /* ShadCN Variables - Updated to match guidelines */
+    --background: 210 33% 98%; /* Light gray background */
+    --foreground: 0 0% 20%; /* Dark gray text */
+    --card: 0 0% 100%; /* White card background */
+    --card-foreground: 0 0% 20%; /* Dark text on cards */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    --primary: 164 67% 30%; /* Teal primary color */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 210 33% 98%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 210 33% 98%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 134 59% 49%; /* Green accent */
+    --accent-foreground: 0 0% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 88%; /* Light gray border */
+    --input: 0 0% 88%;
+    --ring: 164 67% 30%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 215 14% 12%;
+    --foreground: 0 0% 98%;
+    --card: 215 14% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 215 14% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 184 100% 35%;
+    --primary-foreground: 215 14% 12%;
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 166 69% 50%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 184 100% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* PointFlow Brand Colors */
+  --flow-teal: #007D82;
+  --deep-ink: #1B1F23;
+  --snow-white: #FAFAFA;
+  --cloud-grey: #D9D9D9;
+  --soft-mint: #B6EFE5;
+  --success-green: #33CC99;
+  --alert-coral: #FF6B6B;
+  
+  /* Applied to app */
+  --text-primary: var(--deep-ink);
+  --text-secondary: #545A61;
+  --background-primary: var(--snow-white);
+  --background-secondary: white;
+  --accent-color: var(--flow-teal);
+  --border-color: var(--cloud-grey);
+  --reward-highlight: var(--soft-mint);
+  --success-color: var(--success-green);
+  --error-color: var(--alert-coral);
+}
+
+body {
+  font-family: 'Inter', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.balance-card {
+  background-color: var(--background-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.balance-amount {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.fp-highlight {
+  background-color: var(--reward-highlight);
+  color: var(--deep-ink);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-weight: 500;
+}
+
+.button-primary {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button-primary:hover {
+  background-color: #006970;
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button-secondary:hover {
+  background-color: rgba(0, 125, 130, 0.05);
+}
+
+.transaction-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-earn {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.transaction-spend {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.wallet-connected {
+  background-color: rgba(51, 204, 153, 0.1);
+  color: var(--success-color);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.error-text {
+  color: var(--error-color);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Card shadows */
+.card-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--deep-ink);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+/* For reward cards specifically */
+.reward-card {
+  background-color: var(--reward-highlight);
+  color: var(--deep-ink);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
