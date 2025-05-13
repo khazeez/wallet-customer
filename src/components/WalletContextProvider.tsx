@@ -1,9 +1,14 @@
 import { FC, ReactNode, useMemo } from 'react';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import { PhantomWalletAdapter } from '@solana/wallet-adapter-wallets';
-import { clusterApiUrl, Connection } from '@solana/web3.js';
-import { useWallet } from '@solana/wallet-adapter-react';
+import {
+  PhantomWalletAdapter,
+  SolflareWalletAdapter,
+  TorusWalletAdapter,
+  LedgerWalletAdapter,
+
+} from '@solana/wallet-adapter-wallets';
+import { clusterApiUrl } from '@solana/web3.js';
 import '@solana/wallet-adapter-react-ui/styles.css';
 
 interface WalletContextProviderProps {
@@ -11,13 +16,17 @@ interface WalletContextProviderProps {
 }
 
 const WalletContextProvider: FC<WalletContextProviderProps> = ({ children }) => {
-  // Use devnet endpoint
   const endpoint = useMemo(() => clusterApiUrl('devnet'), []);
 
-  // Initialize wallets
-  const wallets = useMemo(() => [
-    new PhantomWalletAdapter(),
-  ], []);
+  const wallets = useMemo(
+    () => [
+      new PhantomWalletAdapter(),
+      new SolflareWalletAdapter(),
+      new TorusWalletAdapter(),
+      new LedgerWalletAdapter(),
+    ],
+    []
+  );
 
   return (
     <ConnectionProvider endpoint={endpoint}>
